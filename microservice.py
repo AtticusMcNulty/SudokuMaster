@@ -1,7 +1,7 @@
 import zmq
 
 def validate_input(input_string):
-    # Validate the input based on your requirements
+    # validate the input based on requirements
     if len(input_string) != 5:
         return False
     code, char = input_string.split("_")
@@ -12,16 +12,16 @@ def validate_input(input_string):
 def microservice():
     context = zmq.Context()
     socket = context.socket(zmq.REP)
-    socket.bind("tcp://*:5555")  # Listening on port 5555
+    socket.bind("tcp://*:5555")  # listening on port 5555
 
     while True:
-        # Wait for next request from client
+        # wait for next request from client
         request = socket.recv_string()
         print(f"Received request: {request}")
 
-        # Validate the request
+        # validate request
         if validate_input(request):
-            # Process the request
+            # orocess request
             code, char = request.split("_")
             if code not in codes_seen:
                 codes_seen.add(code)
@@ -31,12 +31,12 @@ def microservice():
         else:
             response = "invalid"
 
-        # Send reply back to client
+        # send reply back to client
         socket.send_string(response)
 
     socket.close()
     context.term()
 
 if __name__ == "__main__":
-    codes_seen = set()  # To store codes already seen
+    codes_seen = set()    # store unqiue ids
     microservice()
