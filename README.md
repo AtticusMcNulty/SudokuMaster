@@ -31,5 +31,4 @@ response = socket.recv_string()
 ```
 
 ## UML Diagram - Created using PlantUML
-
-![plantuml](https://github.com/AtticusMcNulty/SudokuMaster/assets/68449736/e0f21f42-940b-46ea-be01-02398c257e02)
+![plantuml (1)](https://github.com/AtticusMcNulty/SudokuMaster/assets/68449736/595792da-d873-4024-ae2d-91d4539395b6)
