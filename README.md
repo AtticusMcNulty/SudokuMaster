@@ -32,4 +32,4 @@ response = socket.recv_string()
 
 ## UML Diagram - Created using PlantUML
 
-![Uploading plantuml.svg…]()
+![plantuml](https://github.com/AtticusMcNulty/SudokuMaster/assets/68449736/e0f21f42-940b-46ea-be01-02398c257e02)
