@@ -36,4 +36,7 @@ The microservice will respond to requests based on the input provided. To progra
 ```
 response = socket.recv_string()
 print(f"Received response: {response}")
+
+socket.close()
+context.term()
 ```
