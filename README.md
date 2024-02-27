@@ -29,3 +29,7 @@ response = socket.recv_string()
 ## process response
 ## if needed, send response
 ```
+
+## UML Diagram - Created using PlantUML
+
+![Uploading plantuml.svg…]()
