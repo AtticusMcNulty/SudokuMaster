@@ -1,11 +1,12 @@
 import zmq
 
 def test_microservice():
+    # setup and connect
     context = zmq.Context()
     socket = context.socket(zmq.REQ)
     socket.connect("tcp://localhost:5555")
 
-    # Test cases
+    # test cases
     test_cases = [
         "123_a",
         "456_b",
@@ -18,6 +19,7 @@ def test_microservice():
         "123_aa",
     ]
 
+    # call microservice for each test case
     for test_case in test_cases:
         print(f"Sending request: {test_case}")
         socket.send_string(test_case)
